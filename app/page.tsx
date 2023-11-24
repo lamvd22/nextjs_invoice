@@ -19,7 +19,7 @@ export default function Invoices() {
   useEffect(() => {
     const fetchData = async () => {
       console.log('---fetching---')
-      const response = await fetch('/api/v1/host/invoices', {cache: 'no-store'})
+      const response = await fetch('/api/v1/host/invoices')
       const data = await response.json()
       setInvoices(data)
       setLoading(false)

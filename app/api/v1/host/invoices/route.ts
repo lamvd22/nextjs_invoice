@@ -1,6 +1,7 @@
-import {NextRequest, NextResponse} from 'next/server'
+import {NextResponse} from 'next/server'
 import data from '@/data.json'
 
-export async function GET(request: NextRequest) {
+export const dynamic = 'force-dynamic'
+export async function GET() {
   return new NextResponse(JSON.stringify(data))
 }
