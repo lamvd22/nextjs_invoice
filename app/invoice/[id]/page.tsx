@@ -24,7 +24,7 @@ export default function Detail({params,}: { params: { id: string } }) {
   useEffect(() => {
     const fetchData = async () => {
       console.log('---fetching---')
-      const invoiceObject = await (await fetch(`/api/get/invoice/${params.id}`)).json()
+      const invoiceObject = await (await fetch(`/api/v1/invoice/${params.id}`)).json()
       if (invoiceObject)
         setInvoice(invoiceObject)
       setLoading(false)
