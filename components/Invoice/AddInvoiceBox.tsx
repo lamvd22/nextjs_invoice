@@ -64,7 +64,7 @@ const AddInvoiceBox = ({setInvoices, setAddMode}: AddInvoiceProps) => {
       try {
         const formData = new FormData(form)
         formData.append('status', 'draft')
-        const response = await fetch('/api/save', {
+        const response = await fetch('/api/v1/invoice', {
           method: 'POST',
           body: formData
         })
